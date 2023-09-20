@@ -40,7 +40,7 @@ function Expenses({props}){
     let expsenseContent = <p style={{color: 'white'}}>No expenses found</p>;
 
     if (shownData.length > 0) {
-        expsenseContent = shownData.map((item) => <ExpenseItem props={item} key={item.id} />)}
+        expsenseContent = shownData.map((item) => <ExpenseItem title={item.title} date={item.date} amount={item.amount} key={item.id} />)}
 
     return(
         <>
