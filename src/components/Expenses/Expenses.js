@@ -3,6 +3,7 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import { useState } from "react";
 import ExpensesFilter from "./ExpensesFilter";
+import ExpensesList from "./ExpensesList";
 
 function Expenses({props}){
 
@@ -37,11 +38,6 @@ function Expenses({props}){
         })
       }
 
-    let expsenseContent = <p style={{color: 'white'}}>No expenses found</p>;
-
-    if (shownData.length > 0) {
-        expsenseContent = shownData.map((item) => <ExpenseItem title={item.title} date={item.date} amount={item.amount} key={item.id} />)}
-
     return(
         <>
         <Card className="expenses">
@@ -49,7 +45,8 @@ function Expenses({props}){
         <Card className='expenses-filter'><ExpensesFilter selected={filteredYear} onFilterSelect={showFilterSelection} /></Card>
         {/* {shownData.length === 0 && <p>No expenses found</p>} */}
         {/* {shownData.length > 0 && shownData.map((item) => <ExpenseItem props={item} key={item.id} />)} */}
-        {expsenseContent}
+        {/* {expsenseContent} */}
+        <ExpensesList items={shownData} />
         </Card>
         </>
     )

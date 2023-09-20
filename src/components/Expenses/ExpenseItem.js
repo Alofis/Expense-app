@@ -13,6 +13,7 @@ function ExpenseItem({title, date, amount}){
     }
 
     return (
+        <li>
         <Card className='expense-item'>
             <ExpenseDate date={date} />
             <div className='expense-item__description'>
@@ -22,6 +23,7 @@ function ExpenseItem({title, date, amount}){
                 <button onClick={clickHandler}>Click me</button>
             </div>
         </Card>
+        </li>
         )
 }
 
