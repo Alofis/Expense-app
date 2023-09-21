@@ -72,7 +72,7 @@ const NewExpense = (props) => {
         
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: enteredDate
         }
         //send the data to the parent comp

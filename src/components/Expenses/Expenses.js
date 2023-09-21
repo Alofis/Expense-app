@@ -4,6 +4,8 @@ import Card from "../UI/Card";
 import { useState } from "react";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import Chart from "../Chart/Chart";
+import ExpensesChart from "./ExpensesChart";
 
 function Expenses({props}){
 
@@ -46,6 +48,7 @@ function Expenses({props}){
         {/* {shownData.length === 0 && <p>No expenses found</p>} */}
         {/* {shownData.length > 0 && shownData.map((item) => <ExpenseItem props={item} key={item.id} />)} */}
         {/* {expsenseContent} */}
+        <ExpensesChart expenses={shownData} />
         <ExpensesList items={shownData} />
         </Card>
         </>
